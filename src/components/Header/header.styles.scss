@@ -1,0 +1,37 @@
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  align-items: center;
+  border: solid rgb(200, 200, 200);
+  border-width: 1px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgb(200, 200, 200);
+
+  .header-wrapper {
+    padding: 0 30px;
+
+    .logo-container {
+      height: 50px;
+      width: inherit;
+      margin-top: 10px;
+      box-sizing: none;
+    }
+
+    .options {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .option {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  }
+}

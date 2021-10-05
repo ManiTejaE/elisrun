@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+import {BrowserRouter, Switch, Route} from "react-router-dom"
 import './App.css'
+import Header from './components/Header/Header'
+import HomePage from './pages/HomePage/HomePage'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
+    <BrowserRouter>
     <div className="App">
-    Hello World!
+      <Header />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+
+      </Switch>
     </div>
+    </BrowserRouter>
   )
 }
 
