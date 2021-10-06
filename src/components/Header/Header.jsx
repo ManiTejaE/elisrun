@@ -4,7 +4,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import './header.styles.scss';
 import Logo from '../../assets/rexcloud_logo.svg';
 import NestedMenuItem from 'material-ui-nested-menu-item';
-import { Menu, MenuItem } from '@material-ui/core';
+import { Container, Menu, MenuItem } from '@material-ui/core';
+import { Box } from '@mui/system';
 const Header = () => {
   const [menuPosition1, setMenuPosition1] = React.useState(null);
   const [menuPosition2, setMenuPosition2] = React.useState(null);
@@ -37,8 +38,8 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
-      <div className="header-wrapper">
+    <Box className="header">
+      <Box className="header-wrapper">
         <Link to="/">
           <img src={Logo} alt="" className="logo-container" />
         </Link>
@@ -47,9 +48,9 @@ const Header = () => {
           <MailIcon style={{ width: '18px' }} />
           <span className="contact-text">Contact</span>
         </Link>
-      </div>
-      <div className="header-dropdown-wrapper">
-        <div className="options-menu">
+      </Box>
+      <Box className="header-dropdown-wrapper">
+        <Box className="options-menu">
           <button className="option-btn" onClick={handleOptionsMenu1Click}>
             <span className="option-text">Solutions</span>
           </button>
@@ -68,8 +69,8 @@ const Header = () => {
               <MenuItem>REX-EDGE 1525-EX</MenuItem>
             </NestedMenuItem>
           </Menu>
-        </div>
-        <div className="options-menu">
+        </Box>
+        <Box className="options-menu">
           <button className="option-btn" onClick={handleOptionsMenu2Click}>
             <span className="option-text">About Us</span>
           </button>
@@ -96,16 +97,27 @@ const Header = () => {
               Building Management
             </MenuItem>
           </Menu>
-        </div>
-        <div className="options-menu">
+        </Box>
+        <Box className="options-menu">
           <button className="option-btn">
             <Link to="/career" className="option-text">
               Career
             </Link>
           </button>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+      <Box className="links-wrapper">
+        <Link to="/" className="link-item">
+          <span className="link-text">Products & Services</span>
+        </Link>
+        <Link to="/" className="link-item">
+          <span className="link-text">Market-specific solutions</span>
+        </Link>
+        <Link to="/" className="link-item">
+          <span className="link-text">Company</span>
+        </Link>
+      </Box>
+    </Box>
   );
 };
 

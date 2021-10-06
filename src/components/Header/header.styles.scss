@@ -1,5 +1,5 @@
 .header {
-  height: 120px;
+  // height: 150px;
   width: 100%;
   margin-bottom: 25px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -11,19 +11,21 @@
   justify-content: center;
 
   .header-wrapper {
-    padding: 0 50px;
+    padding: 0 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 70%;
+    height: 50px;
 
     a {
       height: 100%;
+      z-index: 0;
 
       .logo-container {
-        height: 120%;
+        height: 10rem;
         box-sizing: none;
+        transform: translate(0, -30%);
       }
     }
 
@@ -46,10 +48,12 @@
     justify-content: space-evenly;
     justify-self: center;
     align-self: center;
+    align-items: center;
     width: 60%;
-    height: 30%;
+    height: 30px;
     .options-menu {
-      width: 20%;
+      width: 25%;
+      z-index: 1;
 
       .menu-item {
         min-height: auto;
@@ -62,13 +66,47 @@
         border-width: 1px;
         cursor: pointer;
         border-radius: 3px;
+        width: 100%;
+        text-align: center;
+        padding: 0 5rem;
 
         .option-text {
-          padding: 10px 15px;
           color: white;
           text-decoration: none;
           font-size: 18px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
+      }
+    }
+  }
+  .links-wrapper {
+    justify-self: left;
+    display: flex;
+    padding: 10px 10%;
+    height: 10%;
+
+    .link-item {
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 0;
+      color: black;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+
+        border-bottom: 2px solid rgb(0, 110, 255);
+        opacity: 0;
+        transition: 0.5s;
+      }
+      &:hover::before {
+        opacity: 1;
+        width: 100%;
       }
     }
   }
