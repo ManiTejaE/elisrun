@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import MailIcon from "@mui/icons-material/Mail";
-import "./header.styles.scss";
-import Logo from "../../assets/rexcloud_logo.svg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import MailIcon from '@mui/icons-material/Mail';
+import './header.styles.scss';
+import Logo from '../../assets/rexcloud_logo.svg';
 
 const Header = () => {
   return (
@@ -13,14 +13,26 @@ const Header = () => {
         </Link>
 
         <Link to="/contact" className="contact-link">
-          <MailIcon style={{ width: "16px" }} />
+          <MailIcon style={{ width: '18px' }} />
           <span className="contact-text">Contact</span>
         </Link>
       </div>
       <div className="header-dropdown-wrapper">
-        <Link to="/">Option</Link>
-        <Link to="/">Option</Link>
-        <Link to="/">Option</Link>
+        <div className="option-div">
+          <Link to="/" className="option">
+            Option
+          </Link>
+        </div>
+        <div className="option-div">
+          <Link to="/" className="option">
+            Option
+          </Link>
+        </div>
+        <div className="option-div">
+          <Link to="/" className="option">
+            Option
+          </Link>
+        </div>
       </div>
     </div>
   );
