@@ -19,6 +19,22 @@ function GallerySection() {
     slideRef.current.goNext();
   };
 
+  const slideImages = [slide1, slide2, slide3];
+  const slideInfo = [
+    {
+      heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+  ];
+
   const properties = {
     duration: 2000,
     autoplay: true,
@@ -26,24 +42,15 @@ function GallerySection() {
     arrows: true,
     infinite: true,
     easing: 'ease',
-    indicators: () => <Box className="indicator"></Box>,
+    indicators: (index) => (
+      <Box className="indicator">
+        <h3>{slideInfo[index].heading}</h3>
+        <p>{slideInfo[index].body}</p>
+        <Box className="slider"></Box>
+      </Box>
+    ),
   };
 
-  const slideImages = [slide1, slide2, slide3];
-  const slideInfo = [
-    {
-      heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    },
-    {
-      heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    },
-    {
-      heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    },
-  ];
   return (
     <Box className="slideshow">
       <Box className="slide-container">
