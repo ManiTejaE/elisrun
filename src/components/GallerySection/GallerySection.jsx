@@ -6,6 +6,7 @@ import slide2 from '../../assets/slideshow2.jpg';
 import slide3 from '../../assets/slideshow3.jpg';
 import './gallerysection.styles.scss';
 import 'react-slideshow-image/dist/styles.css';
+import { Typography } from '@material-ui/core';
 
 function GallerySection() {
   const slideRef = React.createRef();
@@ -43,9 +44,13 @@ function GallerySection() {
     infinite: true,
     easing: 'ease',
     indicators: (index) => (
-      <Box className="indicator">
-        <h3>{slideInfo[index].heading}</h3>
-        <p>{slideInfo[index].body}</p>
+      <Box className="indicator text-wrap">
+        <Typography className="pt-2 px-2 m-0 fs-5" variant="h6">
+          {slideInfo[index].heading}
+        </Typography>
+        <Typography className="pt-2 px-2 m-0 fs-6">
+          {slideInfo[index].body}
+        </Typography>
         <Box className="slider"></Box>
       </Box>
     ),
@@ -58,14 +63,6 @@ function GallerySection() {
           {slideImages.map((each, index) => (
             <Box key={index} className="each-slide">
               <img className="lazy" src={each} alt="slide" />
-              {slideInfo[index] ? (
-                <Box className="slide-info">
-                  <h3>{slideInfo[index].heading}</h3>
-                  <p>{slideInfo[index].body}</p>
-                </Box>
-              ) : (
-                <> </>
-              )}
             </Box>
           ))}
         </Slide>
