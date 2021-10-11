@@ -16,9 +16,10 @@ const Header = () => {
     }
     event.preventDefault();
     setMenuPosition1({
-      top: event.pageY,
+      top: 64,
       left: event.pageX,
     });
+    console.log(event.pageX, event.pageY);
   };
   const handleOptionsMenu2Click = (event) => {
     if (menuPosition2) {
@@ -26,7 +27,7 @@ const Header = () => {
     }
     event.preventDefault();
     setMenuPosition2({
-      top: event.pageY,
+      top: 64,
       left: event.pageX,
     });
   };
