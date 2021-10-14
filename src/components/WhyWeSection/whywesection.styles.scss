@@ -1,0 +1,33 @@
+.whywe-section {
+  text-align: center;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  padding: 30px 0;
+
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // .whywe-title {
+    //   // color: rgba(0, 171, 201, 0.761);
+    // }
+
+    .introduction {
+      width: 60%;
+    }
+  }
+
+  .bottom-section {
+    .items-grid {
+      .item {
+        transition: 0.5s;
+
+        &:hover {
+          box-shadow: 1px 1px 20px 2px #00000045;
+        }
+      }
+    }
+  }
+}

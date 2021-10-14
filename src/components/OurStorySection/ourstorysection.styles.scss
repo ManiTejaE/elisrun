@@ -1,0 +1,103 @@
+.ourstory-section {
+  padding: 89px 0 101px;
+  width: 100%;
+  &:hover {
+    .section-wrapper {
+      .left-section {
+        .image-wrapper {
+          .image {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .section-wrapper {
+    width: 100%;
+
+    min-height: 263px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    .left-section {
+      height: 100%;
+      overflow: hidden;
+      .image-wrapper {
+        padding-right: 111px;
+        width: 100%;
+        object-fit: cover;
+        height: 410px;
+        overflow: visible;
+
+        .image {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+
+          &::before {
+            content: '';
+            height: calc(100% + 190px);
+            width: calc(100% - 198px);
+            background: rgba(142, 216, 248, 0.08);
+            position: absolute;
+            top: -86px;
+            left: 0;
+            z-index: -1;
+            width: 100vw;
+            right: 198px;
+            left: auto;
+          }
+
+          img {
+            width: 100%;
+            overflow: hidden;
+            transition: transform 500ms, -webkit-transform 500ms;
+
+            transform: scale(1);
+          }
+        }
+      }
+    }
+
+    .right-section {
+      height: fit-content;
+      .content {
+        max-width: 557px;
+
+        h6 {
+          padding: 10px 0;
+        }
+
+        .heading {
+          font-weight: 300 !important;
+          text-align: left;
+          font-size: xx-large;
+          padding: 10px 0;
+        }
+
+        .link {
+          text-decoration: none;
+          color: rgb(13, 202, 240);
+          font-weight: 500;
+          position: relative;
+          background: linear-gradient(
+              rgba(0, 213, 255, 0.61),
+              rgba(0, 213, 255, 0.61)
+            )
+            bottom/0% 2px no-repeat;
+          transition: 1s all;
+
+          &:hover {
+            color: rgba(0, 213, 255, 0.61);
+
+            background-size: 100% 2px;
+          }
+        }
+      }
+    }
+  }
+}
