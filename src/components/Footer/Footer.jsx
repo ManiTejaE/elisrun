@@ -107,18 +107,13 @@ const footerData = [
 ];
 
 function Footer() {
-  return <Box className="footer">
-    {footerData.map((each, index)=> {
-
-        return (
-            <Box className="footer-col">
-            
-            </Box>
-        )
-    })
-
-    }
-  </Box>;
+  return (
+    <Box className="footer">
+      {footerData.map((each, index) => {
+        return <Box className="footer-col" key={index}></Box>;
+      })}
+    </Box>
+  );
 }
 
 export default Footer;

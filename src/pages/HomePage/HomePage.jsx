@@ -8,6 +8,7 @@ import OurClientsSection from '../../components/OurClientsSection/OurClientsSect
 import TestimonialsSection from '../../components/TestimonialsSection/TestimonialsSection';
 import Footer from '../../components/Footer/Footer';
 import OurStorySection from '../../components/OurStorySection/OurStorySection';
+import ContactUs from '../../components/ContactUs/ContactUs';
 
 function HomePage() {
   return (
@@ -17,6 +18,7 @@ function HomePage() {
       <WhyWeSection />
       <OurClientsSection />
       <TestimonialsSection />
+      <ContactUs />
       <Footer />
     </Box>
   );

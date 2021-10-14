@@ -42,7 +42,7 @@ function TestimonialsSection() {
           <Box className="testimonials-wrapper">
             {testimonialsData.map((each, index) => {
               return (
-                <Box className="testimonial">
+                <Box className="testimonial" key={index}>
                   <img
                     src={each.image}
                     alt=""

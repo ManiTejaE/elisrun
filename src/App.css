@@ -3,6 +3,7 @@
   display: block;
   /* height: 100vh; */
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {

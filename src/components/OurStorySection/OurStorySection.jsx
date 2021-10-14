@@ -33,7 +33,7 @@ function OurStorySection() {
               world that is diverse, sustainable, full of thriving communities
               and working better for all.
             </Typography>
-            <Link to="/" className="link">
+            <Link to="/" className="link pt-5">
               Find out more
             </Link>
           </Box>

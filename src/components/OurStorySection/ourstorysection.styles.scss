@@ -64,6 +64,7 @@
     }
 
     .right-section {
+      height: fit-content;
       .content {
         max-width: 557px;
 
@@ -81,10 +82,19 @@
         .link {
           text-decoration: none;
           color: rgb(13, 202, 240);
+          font-weight: 500;
+          position: relative;
+          background: linear-gradient(
+              rgba(0, 213, 255, 0.61),
+              rgba(0, 213, 255, 0.61)
+            )
+            bottom/0% 2px no-repeat;
+          transition: 1s all;
 
-          &::hover {
-            border-bottom: 1px solid rgb(13, 202, 240);
-            border-width: 100%;
+          &:hover {
+            color: rgba(0, 213, 255, 0.61);
+
+            background-size: 100% 2px;
           }
         }
       }

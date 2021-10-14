@@ -55,12 +55,12 @@ function WhyWeSection() {
           services expertise to deliver for our customers.
         </p>
       </Box>
-      <Box className="grid-section d-grid gap-3 px-4 mx-4 p-2">
-        <Box className="row row-cols-3">
+      <Box className="bottom-section d-grid gap-3 px-4 mx-4 p-2">
+        <Box className="row row-cols-3 items-grid">
           {bulletData.map((each, index) => {
             return (
               <Box
-                className=" d-flex p-4  justtify-content-center align-items-center"
+                className="item d-flex p-4 justtify-content-center align-items-center"
                 key={index}
               >
                 <Box className="icon-div w-50">{each.icon}</Box>

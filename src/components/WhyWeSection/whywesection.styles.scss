@@ -19,6 +19,15 @@
     }
   }
 
-  //   .grid-section {
-  //   }
+  .bottom-section {
+    .items-grid {
+      .item {
+        transition: 0.5s;
+
+        &:hover {
+          box-shadow: 1px 1px 20px 2px #00000045;
+        }
+      }
+    }
+  }
 }
